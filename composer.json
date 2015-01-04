@@ -1,0 +1,24 @@
+{
+    "name": "aist/aist-git-tools",
+    "description": "ZF2 Git Toolbar for ZendDeveloperTools.",
+    "copyright": "(C) Aist | Internet Technologies. All rights reserved.",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "git",
+        "zf2",
+        "developer tools"
+    ],
+    "authors": [
+        {
+            "name": "MaSi",
+            "email": "webdeveloper@mateuszsitek.com",
+            "homepage": "http://mateuszsitek.com",
+            "role": "Author"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "gitonomy/gitlib": ">=0.1.7",
+        "zendframework/zend-developer-tools": "dev-master"
+    }
+}
