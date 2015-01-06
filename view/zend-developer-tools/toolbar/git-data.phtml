@@ -1,0 +1,37 @@
+<div class="zdt-toolbar-entry">
+    <div class="zdt-toolbar-preview">
+        <img alt="Git Info" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAASWSDLAAAAMFBMVEXwUDPwUDPwUDPwUDPwUDPwUDPwUDPwUDPwUDPwUDPwUDPwUDPwUDPwUDPwUDPwUDNcxhweAAAAAXRSTlMAQObYZgAAAIJJREFUeNpNUDESwzAIU2mGbvDVbn5CxjzVjJ3aSJGvYcAICQ4ZYOTUsylfNUKEoUALA08Sn2PgvV/MnF2igoqkcAp4VRKkVhdTmNDCSGseJxWeoDADt4hauyY62t0vUIFaoj4tkFKjeEEtgoB3pXq0cIzXQNtCw2Phou+263+Hv+oHuBMkKxjtOn8AAAAASUVORK5CYII=" />
+    </div>
+    <div class="zdt-toolbar-detail">
+        <span class="zdt-toolbar-info">
+            <span class="zdt-detail-label"><?= ucwords($this->translate('git version')) ?></span>
+            <span class="zdt-detail-value"><?= $collector->getGitVersion() ?></span>
+        </span>
+        <span class="zdt-toolbar-info">
+            <span class="zdt-detail-label"><?= ucfirst($this->translatePlural('directory', 'directories', 1)) ?></span>
+            <span class="zdt-detail-value"><?= $collector->getDirectory() ?></span>
+        </span>
+        <span class="zdt-toolbar-info">
+            <span class="zdt-detail-label"><?= ucfirst($this->translate('size')) ?></span>
+            <span class="zdt-detail-value"><?= $collector->getSize() ?></span>
+        </span>
+        <span class="zdt-toolbar-info">
+            <span class="zdt-detail-label"><?= ucfirst($this->translatePlural('branch', 'branches', 2)) ?></span>
+            <span class="zdt-detail-value">
+                <?php foreach ($collector->getRepository()->getReferences()->getLocalBranches() as $branch) { ?>
+                    <span class="zdt-toolbar-status <?= $branch->getName() === $collector->getRepository()->getHead()->getName() ? 'zdt-toolbar-status-green' : '' ?>"><?= $branch->getName() ?></span><br>
+                <?php } ?>
+            </span>
+        </span>
+        <span class="zdt-toolbar-info">
+            <span class="zdt-detail-label"><?= ucfirst($this->translatePlural('tag', 'tags', 2)) ?></span>
+            <span class="zdt-detail-value">
+                <?php foreach ($collector->getTags() as $tag) { ?>
+                    <?= $tag->getName() ?><br>
+                <?php } ?>
+            </span>
+        </span>
+        <?php echo $this->ZendDeveloperToolsDetailArray('Hooks', $collector->getEnabledHooks()) ?>
+        <?= $this->ZendDeveloperToolsDetailArray('Remotes', $collector->getRemotes()) ?>
+    </div>
+</div>
