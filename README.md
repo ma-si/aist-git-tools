@@ -7,7 +7,7 @@ About
 =====
 Information of the application repository data like this :
 
-![git toolbar for zend developer tools](/data/docs/toolbar.png)
+![git toolbar for zend developer tools](https://github.com/ma-si/aist-git-tools/blob/master/data/docs/toolbar.png)
 
 - [x] git version info
 - [x] directory info
