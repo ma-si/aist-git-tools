@@ -21,5 +21,10 @@
         "php": ">=5.4.0",
         "gitonomy/gitlib": ">=0.1.7",
         "zendframework/zend-developer-tools": "dev-master"
+    },
+    "autoload": {
+        "classmap": [
+            "./"
+        ]
     }
 }
