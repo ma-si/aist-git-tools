@@ -2,7 +2,7 @@
     <div class="zdt-toolbar-preview">
         <img alt="Git Info" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAASWSDLAAAAMFBMVEXwUDPwUDPwUDPwUDPwUDPwUDPwUDPwUDPwUDPwUDPwUDPwUDPwUDPwUDPwUDPwUDNcxhweAAAAAXRSTlMAQObYZgAAAIJJREFUeNpNUDESwzAIU2mGbvDVbn5CxjzVjJ3aSJGvYcAICQ4ZYOTUsylfNUKEoUALA08Sn2PgvV/MnF2igoqkcAp4VRKkVhdTmNDCSGseJxWeoDADt4hauyY62t0vUIFaoj4tkFKjeEEtgoB3pXq0cIzXQNtCw2Phou+263+Hv+oHuBMkKxjtOn8AAAAASUVORK5CYII=" />
     </div>
-    <div class="zdt-toolbar-detail">
+    <div class="zdt-toolbar-detail" style="max-height: 350px !important; max-width: 700px; overflow-y: auto !important; overflow-x: hidden;">
         <span class="zdt-toolbar-info">
             <span class="zdt-detail-label"><?= ucwords($this->translate('git version')) ?></span>
             <span class="zdt-detail-value"><?= $collector->getGitVersion() ?></span>
@@ -31,7 +31,7 @@
                 <?php } ?>
             </span>
         </span>
-        <?php echo $this->ZendDeveloperToolsDetailArray('Hooks', $collector->getEnabledHooks()) ?>
-        <?= $this->ZendDeveloperToolsDetailArray('Remotes', $collector->getRemotes()) ?>
+        <?= $this->ZendDeveloperToolsDetailArray(ucfirst($this->translatePlural('hook', 'hooks', 2)), $collector->getEnabledHooks()) ?>
+        <?= $this->ZendDeveloperToolsDetailArray(ucfirst($this->translatePlural('remote', 'remotes', 2)), $collector->getRemotes()) ?>
     </div>
 </div>
