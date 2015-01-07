@@ -3,19 +3,19 @@
         <img alt="Git Info" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAASWSDLAAAAMFBMVEXwUDPwUDPwUDPwUDPwUDPwUDPwUDPwUDPwUDPwUDPwUDPwUDPwUDPwUDPwUDPwUDNcxhweAAAAAXRSTlMAQObYZgAAAIJJREFUeNpNUDESwzAIU2mGbvDVbn5CxjzVjJ3aSJGvYcAICQ4ZYOTUsylfNUKEoUALA08Sn2PgvV/MnF2igoqkcAp4VRKkVhdTmNDCSGseJxWeoDADt4hauyY62t0vUIFaoj4tkFKjeEEtgoB3pXq0cIzXQNtCw2Phou+263+Hv+oHuBMkKxjtOn8AAAAASUVORK5CYII=" />
     </div>
     <div class="zdt-toolbar-detail">
+        <span class="zdt-toolbar-info">
+            <span class="zdt-detail-label"><?= ucwords($this->translate('git version')) ?></span>
+            <span class="zdt-detail-value"><?= $collector->getGitVersion() ?></span>
+        </span>
+        <span class="zdt-toolbar-info">
+            <span class="zdt-detail-label"><?= ucfirst($this->translatePlural('directory', 'directories', 1)) ?></span>
+            <span class="zdt-detail-value"><?= $collector->getDirectory() ?></span>
+        </span>
+        <span class="zdt-toolbar-info">
+            <span class="zdt-detail-label"><?= ucfirst($this->translate('size')) ?></span>
+            <span class="zdt-detail-value"><?= $collector->getSize() ?></span>
+        </span>
         <div style="max-height: 400px !important; max-width: 700px; overflow-y: auto !important; overflow-x: hidden;">
-            <span class="zdt-toolbar-info">
-                <span class="zdt-detail-label"><?= ucwords($this->translate('git version')) ?></span>
-                <span class="zdt-detail-value"><?= $collector->getGitVersion() ?></span>
-            </span>
-            <span class="zdt-toolbar-info">
-                <span class="zdt-detail-label"><?= ucfirst($this->translatePlural('directory', 'directories', 1)) ?></span>
-                <span class="zdt-detail-value"><?= $collector->getDirectory() ?></span>
-            </span>
-            <span class="zdt-toolbar-info">
-                <span class="zdt-detail-label"><?= ucfirst($this->translate('size')) ?></span>
-                <span class="zdt-detail-value"><?= $collector->getSize() ?></span>
-            </span>
             <span class="zdt-toolbar-info">
                 <span class="zdt-detail-label"><?= ucfirst($this->translatePlural('branch', 'branches', 2)) ?></span>
                 <span class="zdt-detail-value">
