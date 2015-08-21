@@ -2,6 +2,8 @@ Aist Git Tools
 ==============
 Module providing git toolbar for the [Zend Developer Tools](https://github.com/zendframework/ZendDeveloperTools).
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/d5905635-cc2b-4845-acb2-7548a67d8945/mini.png)](https://insight.sensiolabs.com/projects/d5905635-cc2b-4845-acb2-7548a67d8945)
+
 
 About
 =====
