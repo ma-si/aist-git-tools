@@ -7,8 +7,17 @@ php:
   - 7.0
   - hhvm
 
-before_script:
-    - composer install --dev --prefer-source --no-interaction
+before_install:
+  - composer self-update
+  - composer install --dev --prefer-source --no-interaction
+
+script:
+  - ./vendor/bin/phpunit
+
+matrix:
+  allow_failures:
+    - php: 7.0
+    - hhvm
 
 branches:
   only:
