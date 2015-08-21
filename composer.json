@@ -1,7 +1,6 @@
 {
     "name": "aist/aist-git-tools",
     "description": "ZF2 Git Toolbar for ZendDeveloperTools.",
-    "copyright": "(C) Aist | Internet Technologies. All rights reserved.",
     "license": "BSD-3-Clause",
     "keywords": [
         "git",
