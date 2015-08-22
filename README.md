@@ -1,4 +1,4 @@
-Aist Git Tools
+Aist Git Tools [![SensioLabsInsight](https://insight.sensiolabs.com/projects/d5905635-cc2b-4845-acb2-7548a67d8945/small.png)](https://insight.sensiolabs.com/projects/d5905635-cc2b-4845-acb2-7548a67d8945)
 ==============
 Module providing git toolbar for the [Zend Developer Tools](https://github.com/zendframework/ZendDeveloperTools).
 
@@ -8,8 +8,9 @@ Module providing git toolbar for the [Zend Developer Tools](https://github.com/z
 [![Dependency Status](https://www.versioneye.com/user/projects/55d83a578d9c4b0018000001/badge.svg?style=flat)](https://www.versioneye.com/user/projects/55d83a578d9c4b0018000001)
 [![Packagist](https://img.shields.io/packagist/v/aist/aist-git-tools.svg)]()
 [![Code Climate](https://codeclimate.com/github/ma-si/aist-git-tools/badges/gpa.svg)](https://codeclimate.com/github/ma-si/aist-git-tools)
+[![Stories in Ready](https://badge.waffle.io/ma-si/aist-git-tools.svg?label=ready&title=Ready)](http://waffle.io/ma-si/aist-git-tools)
+
 [![License](https://poser.pugx.org/aist/aist-git-tools/license)](https://packagist.org/packages/aist/aist-git-tools)
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/d5905635-cc2b-4845-acb2-7548a67d8945/mini.png)](https://insight.sensiolabs.com/projects/d5905635-cc2b-4845-acb2-7548a67d8945)
 
 
 About
