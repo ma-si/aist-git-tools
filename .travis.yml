@@ -12,12 +12,15 @@ before_install:
   - composer install --dev --prefer-source --no-interaction
 
 script:
-  - ./vendor/bin/phpunit
+  - php vendor/bin/phpunit
+
+after_script:
+  - php vendor/bin/coveralls
 
 matrix:
   allow_failures:
     - php: 7.0
-    - hhvm
+    - php: hhvm
 
 branches:
   only:

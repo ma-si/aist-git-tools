@@ -15,7 +15,6 @@ use PHPUnit_Framework_TestCase;
 
 class ModuleTest extends PHPUnit_Framework_TestCase
 {
-
     public function testGetConfig()
     {
         $module = new Module();
