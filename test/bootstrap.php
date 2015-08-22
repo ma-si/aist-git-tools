@@ -24,8 +24,11 @@ if (class_exists('PHPUnit_Runner_Version', true)) {
 /**
  * Setup autoloading
  */
-//require __DIR__ . '/../vendor/autoload.php';
-require __DIR__ . '/../../../autoload.php';
+if (file_exists(__DIR__ . '/../vendor/autoload.php')) {
+    require __DIR__ . '/../vendor/autoload.php';
+} elseif (file_exists(__DIR__ . '/../../../autoload.php')) {
+    require __DIR__ . '/../../../autoload.php';
+}
 
 /**
  * Start output buffering, if enabled
