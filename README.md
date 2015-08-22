@@ -2,6 +2,7 @@ Aist Git Tools
 ==============
 Module providing git toolbar for the [Zend Developer Tools](https://github.com/zendframework/ZendDeveloperTools).
 
+[![Build Status](https://travis-ci.org/ma-si/aist-git-tools.svg?branch=master)](https://travis-ci.org/ma-si/aist-git-tools)
 [![Total Downloads](https://poser.pugx.org/aist/aist-git-tools/downloads)](https://packagist.org/packages/aist/aist-git-tools)
 [![License](https://poser.pugx.org/aist/aist-git-tools/license)](https://packagist.org/packages/aist/aist-git-tools)
 [![Dependency Status](https://www.versioneye.com/user/projects/55d83a578d9c4b0018000001/badge.svg?style=flat)](https://www.versioneye.com/user/projects/55d83a578d9c4b0018000001)
