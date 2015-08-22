@@ -8,34 +8,34 @@
  * @license   http://opensource.org/licenses/BSD-3-Clause BSD-3-Clause
  */
 
-return array(
-    'service_manager' => array(
-        'invokables' => array(
+return [
+    'service_manager' => [
+        'invokables' => [
             'git.toolbar' => 'AistGitTools\Collector\GitCollector',
-        ),
-    ),
-    'view_manager' => array(
-        'template_path_stack' => array(
+        ],
+    ],
+    'view_manager' => [
+        'template_path_stack' => [
             __DIR__ . '/../view',
-        ),
-        'template_map' => array(
+        ],
+        'template_map' => [
             'zend-developer-tools/toolbar/git-data' => __DIR__ . '/../view/zend-developer-tools/toolbar/git-data.phtml',
-        ),
-    ),
-    'zenddevelopertools' => array(
-        'profiler' => array(
-            'collectors' => array(
+        ],
+    ],
+    'zenddevelopertools' => [
+        'profiler' => [
+            'collectors' => [
                 'git.toolbar' => 'git.toolbar',
-            ),
-        ),
-        'toolbar' => array(
-            'entries' => array(
-                'git.toolbar'  => 'zend-developer-tools/toolbar/git-data',
-            ),
-        ),
-    ),
-    'git' => array(
-        'hooks' => array(
+            ],
+        ],
+        'toolbar' => [
+            'entries' => [
+                'git.toolbar' => 'zend-developer-tools/toolbar/git-data',
+            ],
+        ],
+    ],
+    'git' => [
+        'hooks' => [
             'applypatch-msg',
             'pre-applypatch',
             'post-applypatch',
@@ -53,6 +53,6 @@ return array(
             'pre-auto-gc',
             'post-rewrite',
             'pre-push',
-        ),
-    ),
-);
+        ],
+    ],
+];

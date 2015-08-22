@@ -10,30 +10,29 @@
 
 namespace AistGitTools\Collector;
 
-use ZendDeveloperTools\Collector\CollectorInterface;
-use Zend\Mvc\MvcEvent;
 use AistGitTools\Filter\GitVersionFilter;
 use Gitonomy\Git\Repository;
+use Zend\Mvc\MvcEvent;
+use ZendDeveloperTools\Collector\CollectorInterface;
 
 /**
  * Git Data Collector.
  */
 class GitCollector implements CollectorInterface
 {
-
     /**
      * Hooks from config.
-     * 
+     *
      * @var array
      */
-    private $hooks = array();
+    private $hooks = [];
 
     /**
      * Enabled hooks.
-     * 
+     *
      * @var array
      */
-    private $enabledHooks = array();
+    private $enabledHooks = [];
 
     /**
      * @inheritdoc
@@ -67,8 +66,40 @@ class GitCollector implements CollectorInterface
     }
 
     /**
+     * @param string $name
+     * @return boolean
+     */
+    public function hasHook($name)
+    {
+        return $this->getRepository()->getHooks()->has($name);
+    }
+
+    /**
+     * Get repository.
+     *
+     * @return \Gitonomy\Git\Repository
+     */
+    public function getRepository()
+    {
+        $directory = $this->getDirectory();
+        $repository = new Repository($directory);
+
+        return $repository;
+    }
+
+    /**
+     * Application repository path.
+     *
+     * @return string
+     */
+    public function getDirectory()
+    {
+        return getcwd();
+    }
+
+    /**
      * Hooks from config.
-     * 
+     *
      * @return array
      */
     public function getHooks()
@@ -78,7 +109,7 @@ class GitCollector implements CollectorInterface
 
     /**
      * Enabled hooks.
-     * 
+     *
      * @return array
      */
     public function getEnabledHooks()
@@ -88,29 +119,20 @@ class GitCollector implements CollectorInterface
 
     /**
      * Git Version.
-     * 
+     *
      * @return string
      */
     public function getGitVersion()
     {
         $filter = new GitVersionFilter();
         $repository = $this->getRepository();
+
         return $filter->filter($repository->run('version'));
     }
 
     /**
-     * Application repository path.
-     * 
-     * @return string
-     */
-    public function getDirectory()
-    {
-        return getcwd();
-    }
-
-    /**
      * Repository size in KB.
-     * 
+     *
      * @return string
      */
     public function getSize()
@@ -119,20 +141,8 @@ class GitCollector implements CollectorInterface
     }
 
     /**
-     * Get repository.
-     * 
-     * @return \Gitonomy\Git\Repository
-     */
-    public function getRepository()
-    {
-        $directory = $this->getDirectory();
-        $repository = new Repository($directory);
-        return $repository;
-    }
-
-    /**
      * Repository tags.
-     * 
+     *
      * @return array
      */
     public function getTags()
@@ -142,35 +152,25 @@ class GitCollector implements CollectorInterface
 
     /**
      * Remote names "git remote".
-     * 
+     *
      * @return array
      */
     public function getRemoteNames()
     {
         $remotes = explode(PHP_EOL, $this->getRepository()->run('remote'));
+
         return $remotes;
     }
 
     /**
      * Remotes "git remote -v".
-     * 
+     *
      * @return array
      */
     public function getRemotes()
     {
-        $remotes = explode(PHP_EOL, $this->getRepository()->run('remote', array('-v')));
+        $remotes = explode(PHP_EOL, $this->getRepository()->run('remote', ['-v']));
+
         return $remotes;
     }
-
-    /**
-     * 
-     * 
-     * @param string $name
-     * @return boolean
-     */
-    public function hasHook($name)
-    {
-        return $this->getRepository()->getHooks()->has($name);
-    }
-
 }

@@ -14,15 +14,13 @@ use Zend\Filter\PregReplace;
 
 class GitVersionFilter extends PregReplace
 {
-    
-    protected $options = array(
-        'pattern'     => array('/^git version /','/\n/'),
+    protected $options = [
+        'pattern'     => ['/^git version /','/\n/'],
         'replacement' => '',
-    );
+    ];
     
     public function __construct()
     {
         
     }
-    
 }
