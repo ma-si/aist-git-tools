@@ -4,21 +4,21 @@
     </div>
     <div class="zdt-toolbar-detail">
         <span class="zdt-toolbar-info">
-            <span class="zdt-detail-label"><?= ucwords($this->translate('git version')) ?></span>
+            <span class="zdt-detail-label"><?= ucwords('git version') ?></span>
             <span class="zdt-detail-value"><?= $collector->getGitVersion() ?></span>
         </span>
         <span class="zdt-toolbar-info">
-            <span class="zdt-detail-label"><?= ucfirst($this->translatePlural('directory', 'directories', 1)) ?></span>
+            <span class="zdt-detail-label"><?= ucfirst('directory') ?></span>
             <span class="zdt-detail-value"><?= $collector->getDirectory() ?></span>
         </span>
         <span class="zdt-toolbar-info">
-            <span class="zdt-detail-label"><?= ucfirst($this->translate('size')) ?></span>
+            <span class="zdt-detail-label"><?= ucfirst('size') ?></span>
             <span class="zdt-detail-value"><?= $collector->getSize() ?></span>
         </span>
         <span class="zdt-toolbar-info">
             <div style="max-height: 400px !important; max-width: 700px; overflow-y: auto !important; overflow-x: hidden;">
                 <span class="zdt-toolbar-info">
-                    <span class="zdt-detail-label"><?= ucfirst($this->translatePlural('branch', 'branches', 2)) ?></span>
+                    <span class="zdt-detail-label"><?= ucfirst('branches') ?></span>
                     <span class="zdt-detail-value">
                         <?php foreach ($collector->getRepository()->getReferences()->getLocalBranches() as $branch) { ?>
                             <span class="zdt-toolbar-status <?= $branch->getName() === $collector->getRepository()->getHead()->getName() ? 'zdt-toolbar-status-green' : '' ?>"><?= $branch->getName() ?></span><br>
@@ -26,15 +26,15 @@
                     </span>
                 </span>
                 <span class="zdt-toolbar-info">
-                    <span class="zdt-detail-label"><?= ucfirst($this->translatePlural('tag', 'tags', 2)) ?></span>
+                    <span class="zdt-detail-label"><?= ucfirst('tags') ?></span>
                     <span class="zdt-detail-value">
                         <?php foreach ($collector->getTags() as $tag) { ?>
                             <?= $tag->getName() ?><br>
                         <?php } ?>
                     </span>
                 </span>
-                <?= $this->ZendDeveloperToolsDetailArray(ucfirst($this->translatePlural('hook', 'hooks', 2)), $collector->getEnabledHooks()) ?>
-                <?= $this->ZendDeveloperToolsDetailArray(ucfirst($this->translatePlural('remote', 'remotes', 2)), $collector->getRemotes()) ?>
+                <?= $this->ZendDeveloperToolsDetailArray(ucfirst('hooks'), $collector->getEnabledHooks()) ?>
+                <?= $this->ZendDeveloperToolsDetailArray(ucfirst('remotes'), $collector->getRemotes()) ?>
             </div>
         </span>
     </div>

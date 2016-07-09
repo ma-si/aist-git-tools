@@ -1,11 +1,10 @@
 {
     "name": "aist/aist-git-tools",
-    "description": "ZF2 Git Toolbar for ZendDeveloperTools.",
+    "description": "Git Toolbar for ZendDeveloperTools.",
     "license": "BSD-3-Clause",
     "keywords": [
         "git",
-        "zf2",
-        "developer tools"
+        "zend developer tools"
     ],
     "authors": [
         {
@@ -19,22 +18,59 @@
     "require": {
         "php": ">=5.4.0",
         "gitonomy/gitlib": ">=0.1.7",
-        "zendframework/zend-developer-tools": "dev-master"
+        "zendframework/zend-developer-tools": "dev-master",
+        "zendframework/zend-filter": "^2.7"
     },
     "require-dev": {
-        "phpunit/phpunit": "4.8.*"
+        "phpunit/phpunit": "^5.3",
+        "squizlabs/php_codesniffer": "^2.6",
+        "phpmd/phpmd": "^2.4",
+        "pdepend/pdepend": "^2.2",
+        "phploc/phploc": "^3.0",
+        "sebastian/phpcpd": "^2.0",
+        "phpspec/phpspec": "^2.5",
+        "behat/behat": "^3.1",
+        "mmoreram/php-formatter": "dev-master",
+        "psr/log": "^1.0"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "extra": {
+        "zf": {
+            "module": "AistGitTools"
+        }
     },
     "autoload": {
-        "psr-0": {
-            "AistGitTools": "src/"
-        },
-        "classmap": [
-            "./Module.php"
-        ]
+        "psr-4": {
+            "AistGitTools\\": "src/"
+        }
     },
     "autoload-dev": {
         "psr-4": {
             "AistGitToolsTest\\": "test/"
         }
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "@fix"
+        ],
+        "fix": [
+            "@header-fix",
+            "@use-sort",
+            "@header-fix-tests",
+            "@use-sort-tests"
+        ],
+        "header-fix": "bin/php-formatter formatter:header:fix src/",
+        "use-sort": "bin/php-formatter formatter:use:sort src/",
+        "header-fix-tests": "bin/php-formatter formatter:header:fix test/",
+        "use-sort-tests": "bin/php-formatter formatter:use:sort test/",
+        "check": [
+            "@cs",
+            "@test"
+        ],
+        "cs": "phpcs",
+        "cs-fix": "phpcbf",
+        "test": "phpunit"
     }
 }

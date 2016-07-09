@@ -27,6 +27,7 @@ Information of the application repository data like this :
 - [x] tags list
 - [x] enabled hooks list
 - [x] remotes list
+- [x] zend component installer
 
 
 Installation

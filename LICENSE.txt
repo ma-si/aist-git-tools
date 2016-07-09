@@ -1,4 +1,4 @@
-Copyright (c) 2006-2015, Aist Internet Technologies | Mateusz Sitek
+Copyright (c) 2006-2016, Aist Internet Technologies | Mateusz Sitek
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
