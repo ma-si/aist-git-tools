@@ -16,7 +16,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=5.4.0",
+        "php": "^5.6 || ^7.0",
         "gitonomy/gitlib": ">=0.1.7",
         "zendframework/zend-developer-tools": "dev-master",
         "zendframework/zend-filter": "^2.7"

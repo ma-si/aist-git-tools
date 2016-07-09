@@ -37,7 +37,7 @@ Installation of this module uses composer. For composer documentation, please re
 
 1. Install the module via composer by running:
     ```sh
-    $ php composer.phar require aist/aist-git-tools dev-master
+    $ composer require aist/aist-git-tools dev-master
     ```
    or download it directly from github and place it in your application's `module/` directory.
 2. Add the `AistGitTools` module to the module section of your `config/application.config.php`
