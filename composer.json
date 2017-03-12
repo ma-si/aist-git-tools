@@ -51,13 +51,11 @@
     },
     "scripts": {
         "post-update-cmd": [
-            "@fix",
-            "@test"
+            "@fix"
         ],
         "fix": [
             "@header-fix",
-            "@use-sort",
-            "@header-check"
+            "@use-sort"
         ],
         "header-fix": [
             "php-formatter formatter:header:fix src",
@@ -76,12 +74,12 @@
         ],
         "check": [
             "@cs-check",
-            "@header-check"
+            "@header-check",
+            "@test"
         ],
         "cs-check": "phpcs src config test",
         "cs-fix": "phpcbf src config test",
         "test":  [
-            "@check",
             "phpunit"
         ]
     }
