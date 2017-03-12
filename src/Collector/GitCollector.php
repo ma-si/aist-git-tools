@@ -4,7 +4,7 @@
  * AistGitTools (http://mateuszsitek.com/projects/aist-git-tools)
  *
  * @link      http://github.com/ma-si/aist-git-tools for the canonical source repository
- * @copyright Copyright (c) 2006-2016 Aist Internet Technologies (http://aist.pl) All rights reserved.
+ * @copyright Copyright (c) 2006-2017 Aist Internet Technologies (http://aist.pl) All rights reserved.
  * @license   http://opensource.org/licenses/BSD-3-Clause BSD-3-Clause
  */
 
@@ -16,19 +16,19 @@ use Zend\Mvc\MvcEvent;
 use ZendDeveloperTools\Collector\CollectorInterface;
 
 /**
- * Git Data Collector.
+ * Git Data Collector
  */
 class GitCollector implements CollectorInterface
 {
     /**
-     * Hooks from config.
+     * Hooks from config
      *
      * @var array
      */
     private $hooks = [];
 
     /**
-     * Enabled hooks.
+     * Enabled hooks
      *
      * @var array
      */
@@ -75,7 +75,7 @@ class GitCollector implements CollectorInterface
     }
 
     /**
-     * Get repository.
+     * Get repository
      *
      * @return \Gitonomy\Git\Repository
      */
@@ -88,7 +88,7 @@ class GitCollector implements CollectorInterface
     }
 
     /**
-     * Application repository path.
+     * Application repository path
      *
      * @return string
      */
@@ -98,7 +98,7 @@ class GitCollector implements CollectorInterface
     }
 
     /**
-     * Hooks from config.
+     * Hooks from config
      *
      * @return array
      */
@@ -108,7 +108,7 @@ class GitCollector implements CollectorInterface
     }
 
     /**
-     * Enabled hooks.
+     * Enabled hooks
      *
      * @return array
      */
@@ -118,7 +118,7 @@ class GitCollector implements CollectorInterface
     }
 
     /**
-     * Git Version.
+     * Git Version
      *
      * @return string
      */
@@ -131,7 +131,7 @@ class GitCollector implements CollectorInterface
     }
 
     /**
-     * Repository size in KB.
+     * Repository size in KB
      *
      * @return string
      */
@@ -141,7 +141,7 @@ class GitCollector implements CollectorInterface
     }
 
     /**
-     * Repository tags.
+     * Repository tags
      *
      * @return array
      */
@@ -151,7 +151,7 @@ class GitCollector implements CollectorInterface
     }
 
     /**
-     * Remote names "git remote".
+     * Remote names "git remote"
      *
      * @return array
      */
@@ -163,7 +163,7 @@ class GitCollector implements CollectorInterface
     }
 
     /**
-     * Remotes "git remote -v".
+     * Remotes "git remote -v"
      *
      * @return array
      */

@@ -15,7 +15,7 @@ Module providing git toolbar for the [Zend Developer Tools](https://github.com/z
 
 About
 =====
-Information of the application repository data like this :
+Information of the application repository data like this:
 
 ![git toolbar for zend developer tools](https://github.com/ma-si/aist-git-tools/blob/master/data/docs/toolbar.png)
 
@@ -28,6 +28,8 @@ Information of the application repository data like this :
 - [x] enabled hooks list
 - [x] remotes list
 - [x] zend component installer
+- [ ] git time metrics (GTM)
+- [ ] git flow
 
 
 Installation
@@ -36,8 +38,8 @@ Installation of this module uses composer. For composer documentation, please re
 [getcomposer.org](http://getcomposer.org/).
 
 1. Install the module via composer by running:
-    ```sh
-    $ composer require aist/aist-git-tools dev-master
+    ```bash
+    composer require aist/aist-git-tools dev-master
     ```
    or download it directly from github and place it in your application's `module/` directory.
 2. Add the `AistGitTools` module to the module section of your `config/application.config.php`
